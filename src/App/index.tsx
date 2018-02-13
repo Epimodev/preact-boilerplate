@@ -1,19 +1,23 @@
 import { h } from 'preact';
 import Icon from 'src/components/Icon';
-import Clock from 'src/components/Clock';
+import TimePage from 'src/pages/Time';
+import CounterPage from 'src/pages/Counter';
 import checkmarkIcon from 'src/icons/checkmark.svg';
 import * as style from './style.scss';
 
-console.log(environment);
+interface Props {}
 
-function App() {
+function App(props: Props) {
   return (
     <div className={style.container}>
       <h2>Hello World!</h2>
       <Icon className={style.icon} href={checkmarkIcon} />
-      <Clock />
+      <TimePage />
+      <CounterPage />
     </div>
   );
 }
+
+
 
 export default App;

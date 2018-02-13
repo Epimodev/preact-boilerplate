@@ -1,11 +1,17 @@
 import { h, render } from 'preact';
+import { Provider } from 'preact-redux';
+import store from './store';
 import App from './App';
 
 const appContainer = document.getElementById('app');
 function renderApp() {
   appContainer.innerHTML = null;
   render(
-    <App />,
+    (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    ),
     appContainer,
   );
 }
