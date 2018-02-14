@@ -15,17 +15,21 @@
   "scripts": {
     "dev": "node webpack/development.js",
     "build": "yarn lint && node webpack/build.js",
-    "lint": "tslint -c tslint.json 'src/**/*.ts*'"
+    "lint": "tslint -c tslint.json 'src/**/*.ts*'",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.13",
     "autoprefixer": "^7.1.6",
     "awesome-typescript-loader": "^3.4.1",
+    "babel-core": "^6.26.0",
     "css-loader": "^0.28.7",
     "dotenv": "^5.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.6.0",
     "postcss-loader": "^2.0.8",
+    "preact-compat": "^3.18.0",
     "progress-bar-webpack-plugin": "^1.10.0",
     "sass-loader": "^6.0.6",
     "shelljs": "^0.8.1",
