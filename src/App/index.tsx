@@ -10,8 +10,6 @@ interface Props {}
 function App(props: Props) {
   return (
     <div className={style.container}>
-      <h2>Hello World!</h2>
-      <Icon className={style.icon} href={checkmarkIcon} />
       <TimePage />
       <CounterPage />
     </div>

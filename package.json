@@ -16,7 +16,7 @@
     "dev": "node webpack/development.js",
     "build": "yarn lint && node webpack/build.js",
     "lint": "tslint -c tslint.json 'src/**/*.ts*'",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -s ./ -p 9001 -c .storybook"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.13",

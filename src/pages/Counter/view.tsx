@@ -1,5 +1,12 @@
 import { h } from 'preact';
-import Clock from 'src/components/Clock';
+import Icon from 'src/components/Icon';
+import Title from 'src/components/Title';
+import Button from 'src/components/Button';
+import checkmarkIcon from 'src/icons/checkmark.svg';
+import * as style from './style.scss';
+
+interface Props {}
+
 
 interface Props {
   count: number;
@@ -13,11 +20,14 @@ function CounterPage(props: Props) {
 
   return (
     <div>
-      <h2>Welcome to counter page</h2>
-      <div>Count: {count}</div>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={double}>Double</button>
+      <Title>Welcome to counter page</Title>
+      <div>
+        Count: {count}
+        <Icon className={style.icon} href={checkmarkIcon} />
+      </div>
+      <Button onClick={increment}>Increment</Button>
+      <Button onClick={decrement}>Decrement</Button>
+      <Button onClick={double} isPrimary>Double</Button>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import Title from 'src/components/Title';
 import Clock from 'src/components/Clock';
 
 interface Props {}
@@ -6,7 +7,7 @@ interface Props {}
 function TimePage(props: Props) {
   return (
     <div>
-      <h2>Welcome to Time page</h2>
+      <Title>Welcome to Time page</Title>
       <Clock />
     </div>
   );
