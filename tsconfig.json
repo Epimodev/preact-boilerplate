@@ -10,7 +10,7 @@
     "lib": [
       "dom",
       "es5",
-      "es6",
+      "es6"
     ],
     "typeRoots" : [
       "./node_modules/@types",
@@ -19,7 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "*": ["*"]
-    },
+    }
   },
   "include": [
     "./src/**/*"
