@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpackBaseConfig = require('./webpack.base.config');
 const config = require('./config');
 
 module.exports = merge(webpackBaseConfig, {
+  mode: 'production',
   module: {
     rules: [
       {
@@ -33,22 +33,6 @@ module.exports = merge(webpackBaseConfig, {
         },
       },
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false,
-      compress: {
-        warnings: false,
-      },
-    }),
     new ExtractTextPlugin(config.outputCSS),
-    new HtmlWebpackPlugin({
-      filename: config.entryHTML,
-      template: config.outputHTML,
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-      },
-    }),
   ],
 });

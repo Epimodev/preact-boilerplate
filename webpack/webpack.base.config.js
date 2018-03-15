@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const webpack = require('webpack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
 const path = require('path');
 const config = require('./config');
@@ -40,6 +41,16 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       environment: JSON.stringify(envVars.parsed),
+    }),
+    new HtmlWebpackPlugin({
+      filename: config.entryHTML,
+      template: config.outputHTML,
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true,
+      },
     }),
     new SvgSpriteHtmlWebpackPlugin(),
     new ProgressBarPlugin(),

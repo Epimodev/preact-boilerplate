@@ -1,11 +1,10 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackBaseConfig = require('./webpack.base.config');
 const config = require('./config');
 
 module.exports = merge(webpackBaseConfig, {
-  devtool: 'eval',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -25,11 +24,6 @@ module.exports = merge(webpackBaseConfig, {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: config.entryHTML,
-      template: config.outputHTML,
-      inject: true,
-    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
