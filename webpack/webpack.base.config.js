@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const webpack = require('webpack');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const WebpackBar = require('webpackbar');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
 const path = require('path');
@@ -53,6 +53,6 @@ module.exports = {
       },
     }),
     new SvgSpriteHtmlWebpackPlugin(),
-    new ProgressBarPlugin(),
+    new WebpackBar(),
   ],
 };

@@ -30,7 +30,6 @@
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
     "preact-compat": "^3.18.0",
-    "progress-bar-webpack-plugin": "^1.11.0",
     "sass-loader": "^7.0.1",
     "shelljs": "^0.8.1",
     "style-loader": "^0.21.0",
@@ -41,7 +40,8 @@
     "typescript": "^2.8.3",
     "webpack": "^4.7.0",
     "webpack-dev-server": "^3.1.4",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpackbar": "^2.6.1"
   },
   "dependencies": {
     "preact": "^8.2.9",
