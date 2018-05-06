@@ -20,8 +20,4 @@ export type DECREMENT_BY = {
   payload: number;
 };
 
-export type CounterAction =
-  | INCREMENT
-  | DECREMENT
-  | INCREMENT_BY
-  | DECREMENT_BY;
+export type CounterAction = INCREMENT | DECREMENT | INCREMENT_BY | DECREMENT_BY;

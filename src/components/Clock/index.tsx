@@ -34,11 +34,7 @@ class Clock extends Component<Props, State> {
   render(props: Props, state: State) {
     const { date } = state;
 
-    return (
-      <div className={style.clock}>
-        {date.toLocaleTimeString()}
-      </div>
-    );
+    return <div className={style.clock}>{date.toLocaleTimeString()}</div>;
   }
 }
 

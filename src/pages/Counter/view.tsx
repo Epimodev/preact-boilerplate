@@ -7,7 +7,6 @@ import * as style from './style.scss';
 
 interface Props {}
 
-
 interface Props {
   count: number;
   increment: () => void;
@@ -27,7 +26,9 @@ function CounterPage(props: Props) {
       </div>
       <Button onClick={increment}>Increment</Button>
       <Button onClick={decrement}>Decrement</Button>
-      <Button onClick={double} isPrimary>Double</Button>
+      <Button onClick={double} isPrimary>
+        Double
+      </Button>
     </div>
   );
 }

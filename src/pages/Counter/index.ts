@@ -21,11 +21,14 @@ function mapStateToProps(state: StoreState): StateProps {
 }
 
 function mapDispatchToProps(dispatch: AppDispatch): DispatchProps {
-  return bindActionCreators({
-    increment: actions.increment,
-    decrement: actions.decrement,
-    double: actions.double,
-  }, dispatch);
+  return bindActionCreators(
+    {
+      increment: actions.increment,
+      decrement: actions.decrement,
+      double: actions.double,
+    },
+    dispatch,
+  );
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CounterPage);

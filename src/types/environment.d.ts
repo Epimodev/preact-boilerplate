@@ -1,1 +1,1 @@
-declare const environment: { [x:string]: string };
+declare const environment: { [x: string]: string };

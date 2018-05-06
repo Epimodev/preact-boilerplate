@@ -14,6 +14,4 @@ function App(props: Props) {
   );
 }
 
-
-
 export default App;

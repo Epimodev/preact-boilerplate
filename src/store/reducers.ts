@@ -6,8 +6,7 @@ interface StoreState {
   counter: CounterState;
 }
 
-type Action =
-  | CounterAction;
+type Action = CounterAction;
 
 const reducers = combineReducers<StoreState>({
   counter: counterReducer,

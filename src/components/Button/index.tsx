@@ -9,9 +9,7 @@ interface Props {
 
 function Button(props: Props) {
   const { isPrimary = false, children = '', onClick } = props;
-  const buttonClassNames = isPrimary
-    ? `${style.button} ${style.button_isPrimary}`
-    : style.button;
+  const buttonClassNames = isPrimary ? `${style.button} ${style.button_isPrimary}` : style.button;
 
   return (
     <button className={buttonClassNames} onClick={onClick}>

@@ -34,10 +34,4 @@ function double(): AppThunk<void> {
   };
 }
 
-export {
-  increment,
-  decrement,
-  incrementBy,
-  decrementBy,
-  double,
-};
+export { increment, decrement, incrementBy, decrementBy, double };
