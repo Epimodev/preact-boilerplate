@@ -4,6 +4,12 @@ const config = require('../webpack/config');
 
 const projectRoot = path.resolve(__dirname, '../');
 
+/**
+ * We use ts-loader instead of awesome-typescript-loader
+ * becase storybook is not compatible with last version of ts-loader and awesome-typescript-loader
+ * and we need awesome-typescript-loader at the last version to support last webpack version
+ */
+
 module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -21,7 +27,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: 'awesome-typescript-loader',
+        use: 'ts-loader',
       },
       {
         test: /\.scss$/,
@@ -33,7 +39,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg?$/,
+        test: /\.svg$/,
         exclude: /node_modules/,
         use: SvgSpriteHtmlWebpackPlugin.getLoader(),
       },

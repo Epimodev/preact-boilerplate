@@ -32,7 +32,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.svg?$/,
+        test: /\.svg$/,
         exclude: /node_modules/,
         use: SvgSpriteHtmlWebpackPlugin.getLoader(),
       },
