@@ -15,7 +15,7 @@ function Button(props: Props) {
 
   return (
     <button className={buttonClassNames} onClick={onClick}>
-      {props.children}
+      {children}
     </button>
   );
 }

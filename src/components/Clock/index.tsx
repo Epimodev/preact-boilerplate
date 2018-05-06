@@ -8,7 +8,7 @@ interface State {
 }
 
 class Clock extends Component<Props, State> {
-  interval: number;
+  interval: number = 0;
   constructor(props: Props) {
     super(props);
 

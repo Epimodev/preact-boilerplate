@@ -1,8 +1,6 @@
 import { h } from 'preact';
-import Icon from 'src/components/Icon';
 import TimePage from 'src/pages/Time';
 import CounterPage from 'src/pages/Counter';
-import checkmarkIcon from 'src/icons/checkmark.svg';
 import * as style from './style.scss';
 
 interface Props {}

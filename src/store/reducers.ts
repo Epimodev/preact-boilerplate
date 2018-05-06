@@ -1,4 +1,4 @@
-import { combineReducers, Dispatch } from 'redux';
+import { combineReducers } from 'redux';
 import counterReducer from 'src/pages/Counter/reducer';
 import { CounterState, CounterAction } from 'src/pages/Counter/types';
 

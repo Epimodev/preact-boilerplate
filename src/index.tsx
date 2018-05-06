@@ -5,15 +5,17 @@ import App from './App';
 
 const appContainer = document.getElementById('app');
 function renderApp() {
-  appContainer.innerHTML = null;
-  render(
-    (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    ),
-    appContainer,
-  );
+  if (appContainer) {
+    appContainer.innerHTML = '';
+    render(
+      (
+        <Provider store={store}>
+          <App />
+        </Provider>
+      ),
+      appContainer,
+    );
+  }
 }
 
 renderApp();
